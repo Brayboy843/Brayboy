@@ -1,56 +1,89 @@
-# Hello, I'm Kenneth Brayboy
-<a href="https://linkedin.com/in/kenneth-brayboy-iii-21b1571b3"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+## Basic Detection Lab
 
-I am a Cyber Security student enrolled at WGU with a profound interest in technology and a dedication to solving complex problems focusing on foundational skills. 
+### Objective
 
-## Certifications 
-<div>
-<img src="https://img.shields.io/badge/-Security%2B-FF0000?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-Network%2B-007ACC?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-A%2B-4D4D4D?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-ITIL%204%20Foundation-6F2DA8?&style=for-the-badge&logoColor=white" />
-</div>
+Build a small Security Operations Center (SOC) lab capable of generating, collecting, and detecting common attack techniques using open-source security tools.
 
-## Objective
-[Provide Objective - Remove this afterwards]]
+### Skills Learned
 
-My journey in computer science has led me to develop a passion for cybersecurity, and I am now eager to transition into this field, specifically aiming to join a Security Operations Center (SOC) as a Tier 1 Analyst or Help Desk to begin.
+- Windows Event Log analysis
+- SIEM administration
+- Threat detection engineering
+- Log collection and normalization
+- MITRE ATT&CK mapping
+- IOC identification
+- Basic incident investigation
 
-## Skills
-[Provide skills and associated project. Make sure to hyperlink the project - Remove this afterwards]]
+### Tools Used
 
-| Skill                                         | Associated Project         |
-|-----------------------------------------------|----------------------------|
-| SIEM Implementation and Log Analysis          | <a href="https://google.com">Detection Lab</a>|
-| Network Traffic Monitoring and Attack Detection | <a href="https://google.com">Detection Lab</a>|
-| Security Automation with Shuffle SOAR         | SOC Automation Lab|
-| Incident Response Planning and Execution      | SOC Automation Lab|
-| Case Management with TheHive                  | SOC Automation Lab|
-| Scripting and Automation for Threat Mitigation | SOC Automation Lab|
+- Microsoft Windows 11
+- Sysmon
+- Sysmon Modular Configuration
+- Splunk Enterprise (Free)
+- Kali Linux
+- Atomic Red Team
+- PowerShell
 
-## Tools
-[Provide tools and break them down into categories. Use ChatGPT to help create the link - Remove this afterwards]]
+### Lab Architecture
 
-### Network
-<div>
-    <img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Suricata-EF3B2D?&style=for-the-badge&logo=Suricata&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Zeek-777BB4?&style=for-the-badge&logo=Zeek&logoColor=white" />
-</div>
+```
++-------------------+       Sysmon Logs       +----------------+
+|  Windows 11 VM    | ----------------------> | Splunk Server  |
+|  Sysmon Installed |                         | SIEM           |
++-------------------+                         +----------------+
+          ^
+          |
+          |
+Attack Simulation
+          |
+          |
++-------------------+
+| Kali Linux / ART  |
++-------------------+
+```
 
-### Endpoint
-<div>
-    <img src="https://img.shields.io/badge/-Microsoft_Defender_for_Endpoint-00A4EF?&style=for-the-badge&logo=Microsoft&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Velociraptor-4B275F?&style=for-the-badge&logo=Velociraptor&logoColor=white" />
-</div>
+### Lab Setup
 
-### SIEM
-<div>
-    <img src="https://img.shields.io/badge/-Microsoft_Sentinel-0078D4?&style=for-the-badge&logo=Microsoft&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Splunk-000000?&style=for-the-badge&logo=Splunk&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Elastic-005571?&style=for-the-badge&logo=Elastic&logoColor=white" />
-</div>
+1. Create a Windows 11 virtual machine.
+2. Install Sysmon with a standard configuration.
+3. Install Splunk Enterprise.
+4. Configure Splunk to ingest Windows Event Logs.
+5. Generate attack activity using Atomic Red Team or PowerShell.
+6. Search for indicators within Splunk.
 
-## Projects
-- Detection Lab
-- SOC Automation Project
+### Detection Example
+
+**Technique:** PowerShell Execution
+
+MITRE ATT&CK: T1059.001
+
+**Splunk Search**
+
+```spl
+index=wineventlog EventCode=1
+Image="*powershell.exe"
+```
+
+### Sample Findings
+
+- Detected PowerShell execution
+- Logged parent process
+- Captured command-line arguments
+- Identified execution timestamp
+- Correlated activity to Sysmon Event ID 1
+
+### Future Improvements
+
+- Add Sigma rules
+- Integrate Wazuh
+- Create custom detection rules
+- Simulate ransomware behavior
+- Build detection dashboards
+- Add email alerting
+
+### References
+
+- Sysmon
+- Splunk Enterprise
+- Atomic Red Team
+- MITRE ATT&CK
