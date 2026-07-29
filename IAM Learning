@@ -1,0 +1,131 @@
+# 🛡️ Identity & Access Management (IAM) Career Roadmap
+
+## 1. Earn Microsoft SC-300 (Highest Priority)
+
+**Certification:** Microsoft Certified: Identity and Access Administrator Associate (SC-300)
+
+### Skills You'll Learn
+
+- Microsoft Entra ID (Azure AD)
+- Multi-Factor Authentication (MFA)
+- Conditional Access
+- Role-Based Access Control (RBAC)
+- Identity Governance
+- Privileged Identity Management (PIM)
+
+> **Why It Matters:**  
+> These are core IAM skills frequently listed in job descriptions for Identity and Access Management roles.
+
+---
+
+## 2. Learn Active Directory
+
+Develop hands-on experience with:
+
+- Creating user accounts
+- Managing security groups
+- Organizational Units (OUs)
+- Group Policy basics
+- Password policies
+- Account lockouts
+- User provisioning and deprovisioning
+
+---
+
+## 3. Learn PowerShell
+
+You don't need to become a software developer—focus on automation tasks commonly performed by IAM administrators.
+
+### Recommended Skills
+
+- Create user accounts
+- Disable user accounts
+- Reset passwords
+- Manage group memberships
+- Write basic PowerShell scripts
+
+> **Why It Matters:**  
+> PowerShell is used daily by many Identity and Access Management teams.
+
+---
+
+## 4. Learn an IAM Platform
+
+Gain experience with one or more of the following:
+
+- Microsoft Entra ID ⭐ *(Recommended)*
+- Okta
+- SailPoint
+- CyberArk (Privileged Access Management)
+
+> **Recommendation:**  
+> Start with Microsoft Entra ID, as Microsoft provides free learning paths and hands-on labs.
+
+---
+
+## 5. Build Hands-On Projects
+
+Practical experience helps demonstrate your skills to employers.
+
+### Suggested Projects
+
+- Configure Multi-Factor Authentication (MFA)
+- Create Conditional Access policies
+- Build user lifecycle workflows
+- Configure RBAC roles
+- Document your IAM environment
+- Automate user creation with PowerShell
+
+> Publish your projects on GitHub and include them on your résumé and LinkedIn profile.
+
+---
+
+# Target Job Titles
+
+Consider applying for roles such as:
+
+- IAM Analyst
+- Identity Analyst
+- Identity Administrator
+- Access Management Analyst
+- Active Directory Administrator
+- Microsoft Entra ID Administrator
+- Identity Governance Analyst
+- Information Security Analyst (IAM)
+- Junior IAM Engineer
+
+> **Tip:**  
+> Don't wait until you've earned the SC-300 certification. Your existing certifications already qualify you for many entry-level IT security and identity positions.
+
+---
+
+# Career Opportunities in Northern Virginia
+
+Northern Virginia is one of the strongest job markets for Identity and Access Management professionals.
+
+Many organizations rely on Microsoft identity technologies to secure enterprise environments. Candidates who are eligible for government contracting and can obtain a security clearance often have access to additional career opportunities.
+
+---
+
+# 90-Day Action Plan
+
+## Weeks 1–4
+
+- Study for the Microsoft SC-300 certification
+- Complete Microsoft Learn training modules
+- Practice in a free Microsoft 365 Developer environment
+
+## Weeks 5–8
+
+- Build hands-on IAM projects
+- Configure Microsoft Entra ID
+- Implement MFA
+- Configure RBAC
+- Practice PowerShell automation
+
+## Weeks 9–12
+
+- Earn the SC-300 certification
+- Update your résumé and LinkedIn profile
+- Apply to **10–15 IAM-related positions each week**
+- Continue expanding your GitHub portfolio with IAM projects
